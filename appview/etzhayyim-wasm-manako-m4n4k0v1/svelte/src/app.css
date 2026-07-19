@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: dark;
+	font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+body {
+	margin: 0;
+	background: #0b0d12;
+	color: #e6e9ef;
+}
+
+.wrap {
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 1.5rem 1rem 4rem;
+}
+
+header h1 {
+	font-size: 1.9rem;
+	font-weight: 800;
+	margin: 0;
+}
+header .sub {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: #8b93a7;
+}
+.tagline {
+	color: #9aa3b8;
+	margin: 0.25rem 0 1rem;
+	font-size: 0.9rem;
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: center;
+	margin-bottom: 0.75rem;
+}
+.controls label {
+	font-size: 0.8rem;
+	color: #b6bdce;
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+.controls .slider {
+	min-width: 150px;
+}
+select,
+button,
+input[type='file'] {
+	background: #161a22;
+	color: #e6e9ef;
+	border: 1px solid #2a3140;
+	border-radius: 8px;
+	padding: 0.45rem 0.7rem;
+	font-size: 0.85rem;
+}
+button {
+	cursor: pointer;
+	font-weight: 600;
+}
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.status {
+	font-size: 0.8rem;
+	color: #7fe0a8;
+}
+
+.bar {
+	height: 6px;
+	background: #1b2030;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 0.5rem 0;
+}
+.fill {
+	height: 100%;
+	background: #4f8cff;
+	transition: width 0.2s;
+}
+.warn {
+	background: #2a2410;
+	border: 1px solid #5a4a1a;
+	color: #e8d48a;
+	padding: 0.6rem 0.8rem;
+	border-radius: 8px;
+	font-size: 0.82rem;
+	margin-bottom: 0.75rem;
+}
+.err {
+	background: #2a1414;
+	border: 1px solid #5a1a1a;
+	color: #e89090;
+	padding: 0.6rem 0.8rem;
+	border-radius: 8px;
+	font-size: 0.85rem;
+}
+
+.stage {
+	margin-top: 0.5rem;
+}
+.canvas-wrap {
+	position: relative;
+	display: inline-block;
+	max-width: 100%;
+}
+.canvas-wrap img,
+.canvas-wrap video {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+	border-radius: 10px;
+	background: #000;
+}
+
+.tabs button.active {
+	background: #1d3a6b;
+	border-color: #4f8cff;
+}
+.hint {
+	font-size: 0.78rem;
+	color: #7b8298;
+}
+.canvas-wrap canvas {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+.placeholder {
+	border: 1px dashed #2a3140;
+	border-radius: 10px;
+	padding: 3rem 1rem;
+	text-align: center;
+	color: #7b8298;
+	font-size: 0.9rem;
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-top: 0.8rem;
+}
+.chip {
+	font-size: 0.78rem;
+	padding: 0.2rem 0.5rem;
+	border: 1px solid;
+	border-radius: 999px;
+	background: #141821;
+}
+
+footer {
+	margin-top: 2rem;
+	font-size: 0.72rem;
+	color: #697081;
+	line-height: 1.5;
+}

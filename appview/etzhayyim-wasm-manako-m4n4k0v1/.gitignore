@@ -1,0 +1,2 @@
+# Vite build output (Workers Assets are rebuilt at deploy via pnpm build).
+_svelte/

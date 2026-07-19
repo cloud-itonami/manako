@@ -1,0 +1,25 @@
+This product includes software developed by etzhayyim
+(https://etzhayyim.com / did:web:etzhayyim.com).
+
+This software is distributed under the Apache License 2.0 with the
+etzhayyim Charter Compliance Rider v3.1 (see CHARTER-RIDER.md).
+
+By using, modifying, or redistributing this software, you accept both
+the Apache License 2.0 and the Charter Compliance Rider.
+
+Mission Charter: ADR-2605192100
+Rider ADR: ADR-2605192200 + ADR-2606062100 + ADR-2606082400 (v3.1)
+Design ADR: ADR-2606034800 (manako browser-local YOLO26)
+
+THIRD-PARTY MODEL NOTICE
+========================
+manako runs YOLO26 ONNX models at runtime. The Ultralytics YOLO26 weights
+and the Ultralytics training/export toolchain are licensed AGPL-3.0 and are
+NOT included in, vendored by, or derived into this repository. The operator
+supplies an exported .onnx model at runtime from their own CDN/IPFS host.
+
+The inference code in this app (preprocessing, letterboxing, output decoding,
+NMS, label mapping — `src/lib/yolo26-core.ts`) is original work authored for
+etzhayyim under Apache-2.0 + Charter Rider and is NOT a derivative of
+Ultralytics source. The Charter Rider applies to etzhayyim's code only; the
+model file is an independent runtime artifact governed by its own license.

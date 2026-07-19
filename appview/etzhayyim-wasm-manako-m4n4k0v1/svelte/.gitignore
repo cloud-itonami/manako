@@ -1,0 +1,8 @@
+node_modules/
+dist/
+../_svelte/
+.wrangler/
+# Model weights are operator-supplied at runtime, never committed (AGPL-3.0; no-git-lfs).
+public/models/
+*.onnx
+*.pt
