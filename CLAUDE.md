@@ -1,7 +1,9 @@
 # etzhayyim-project-manako — 眼 Browser-local YOLO26 Object Detection
 
-**URL**: `https://manako.etzhayyim.com` (operator-provisioned)
+**URL**: `https://manako.etzhayyim.com` — **未プロビジョニング。2026-08-14 実測で NXDOMAIN**
+（意図されたホスト名であって、稼働中のホストではない）
 **ADR**: ADR-2606034800
+**Operator 手順**: `docs/operator-quickstart.md`（実走した段と未実走の段を区別して記録してある）
 **Status**: 🟢 R0 — implemented + **empirically verified end-to-end on the WASM runtime**. Real `yolo26n.pt` (Ultralytics 8.4.60, v8.4.0 assets) exported to ONNX `(1,300,6)` NMS-free; `onnxruntime-web` v1.26.0 ran it on the `wasm` EP and manako's core reproduced the canonical bus.jpg result (1 bus + 4 persons) identically to the Python onnxruntime ground truth. Live Chrome/WebGPU screenshot pending (browser extension was not connected in the verifying session).
 
 ## Empirical verification (2026-06-03)
@@ -65,6 +67,8 @@ pnpm build           # → ../_svelte ; then `etzhayyim deploy`
 pip install ultralytics          # AGPL — operator tooling, NEVER vendored into this repo
 yolo export model=yolo26n.pt format=onnx imgsz=640 nms=True   # preferred (NMS-free)
 # upload yolo26n.onnx → cdn.etzhayyim.com/models/yolo26/  (see src/lib/models.ts)
+# ⚠ 2026-08-14 実測: cdn.etzhayyim.com は NXDOMAIN。今日動く経路は自己ホストの
+#   `yolo26n-local`（public/models/yolo26/）だけ — docs/operator-quickstart.md §5
 ```
 
 ## Gates / invariants (per ADR-2606034800)
