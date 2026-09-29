@@ -235,4 +235,4 @@ Application → Storage → *Clear site data* を先に一度やる。
 | モデル欠落時の失敗の出方 | **実測**（§6） |
 | `public/` の起動順トラップ・配信バイト数・バンドル膨張 | **実測**（§5c / §5d / §5e、26 MB のバイナリを stand-in にして両方向を測った） |
 | 実 `.onnx` を積んだ end-to-end 検出 | **未実測** — operator が §5b を踏むまで到達できない |
-| Chrome/WebGPU での実行 | **未実測** — `CLAUDE.md` の R0 ステータスが言うとおり |
+| Chrome/WebGPU での実行 | **未実測** — `AGENTS.md` の R0 ステータスが言うとおり |
